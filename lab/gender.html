@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GENDER</title>
+</head>
+<body>
+	<form name="gender" action="gender.html" method="post" onsubmit="return f1();">
+	
+	<fieldset>
+			<legend>GENDER</legend>
+				<input type="radio" name="genderop" value="M"  /required>Male
+				<input type="radio" name="genderop" value="F" />Female 
+				<input type="radio" name="genderop" value="O" />Other		
+		</fieldset><br>
+		
+		<input type="submit" name="submit" value="Submit" onclick="gender1()">
+	
+	</form>
+	<div id="gender"></div>
+	<script>
+		
+
+		function f1(){
+			var valid=false;
+			var gender = document.gender.genderop;
+			
+			for(var g=0;g<gender.length;g++)
+			{
+				if(gender[g].checked)
+				{
+					valid=true;
+					break;
+				}
+			
+			}
+			
+			if(valid)
+			{
+				alert('GENDER IS SELECTED');
+			}
+			else
+			{
+				alert('NULL SUBMISSION');
+				return false;
+			}
+			
+		}
+	</script>
+</body>
+</html>

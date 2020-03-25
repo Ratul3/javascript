@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NAME</title>
+</head>
+<body>
+
+<form>
+
+<div>
+<label>Name</label><br/>
+
+		<input id="name" type="text" name="" value="" onblur="f1()" /><br> <p id="msg"></p>
+		
+		
+</div>		
+		<input type="button" name="button" value="Submit" onclick="f1()">
+	</form>
+
+<script>
+
+function f1(){
+
+
+			
+			
+			
+			var name = document.getElementById('name').value;
+						
+			if(name == ""){
+				document.getElementById('msg').innerHTML = "null submission";
+          
+}
+
+
+	
+		 var i;
+		  for(i=0;i<name.length;i++)
+			{
+			if ((name.charAt(i) >= 'a' && name.charAt(i) <= 'z') || (name.charAt(i) >= 'A' && name.charAt(i) <= 'Z'))
+			
+		
+		
+			{
+				document.getElementById('msg').innerHTML = "valid";
+			}
+			
+			else{
+				document.getElementById('msg').innerHTML = "name is invalid";
+			}
+			
+			
+			}
+
+			
+		}
+		
+					
+		
+
+
+</script>
+
+
+</body>
+</html>
